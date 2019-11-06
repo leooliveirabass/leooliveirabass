@@ -1,30 +1,42 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Cadastra até 100</title>
     <script src="../funcoes.js"></script>
+    <link rel="stylesheet" href="../estilo.css">
+    <style>
+        p,
+        h2 {
+            text-align: center;
+        }
+    </style>
 </head>
+
 <body>
-    <h1>Cadastra até 100</h1>
-    <p>
-        Insira o valor: [envie 0 para sair] 
-        <input type="text" id="num">
-    </p>
-    <p id="enviar">
-        <input type="button" value="Enviar Numero" onclick="cadastraAte100()">
-    </p>
-    <p id="resposta"></p>
+    <div>
+        <h1>Cadastra até 100</h1>
+        <p>
+            Insira o valor: [envie 0 para sair]
+            <input type="text" id="num">
+        </p>
+        <p id="enviar">
+            <input type="button" value="Enviar Numero" onclick="cadastraAte100()">
+        </p>
+        <p id="resposta"></p>
+    </div>
     <script>
         let vet = []
-        let num 
+        let num
         let ultimo = 0
         let cUlt = 0
         var c = 0
         var pResposta = document.all['resposta']
         var pEnviar = document.all['enviar']
-    </script>   
+    </script>
 </body>
+
 </html>
