@@ -1,22 +1,33 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Alterar Vetor</title>
     <script src="../funcoes.js"></script>
+    <link rel="stylesheet" href="../estilo.css">
+    <style>
+        p,
+        h2 {
+            text-align: center;
+        }
+    </style>
 </head>
+
 <body>
-    <h1>Alterar Vetor</h1>
-    <p>
-        Insira o valor: 
-        <input type="text" id="num">
-    </p>
-    <p id="enviar">
-        <input type="button" value="Enviar Numero" onclick="vetorAlterado()">
-    </p>
-    <p id="resposta"></p>
+    <div>
+        <h1>Alterar Vetor</h1>
+        <p>
+            Insira o valor:
+            <input type="text" id="num">
+        </p>
+        <p id="enviar">
+            <input type="button" value="Enviar Numero" onclick="vetorAlterado()">
+        </p>
+        <p id="resposta"></p>
+    </div>
     <script>
         let vet = []
         let vetAlt = []
@@ -25,4 +36,5 @@
         var pEnviar = document.all['enviar']
     </script>
 </body>
+
 </html>
