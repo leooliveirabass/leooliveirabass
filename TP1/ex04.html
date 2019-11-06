@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Data Cronologicamente Maior</title>
+    <script src="../funcoes.js"></script>
+    <link rel="stylesheet" href="../estilo.css">
+    <style>
+            p, h2{  
+        text-align: center;
+    }
+        </style>
+</head>
+<body>
+ <div class="tp">
+    <h1>Data Cronologicamente Maior</h1>
+    <div>
+        <h2>Primeira Data</h2>
+        <p>
+            Dia: <br>
+            <input type="text" id="dia1">
+        </p>
+        <p>
+            Mês: <br>
+            <input type="text" id="mes1">
+        </p>
+        <p>
+            Ano: <br>
+            <input type="text" id="ano1">
+        </p>
+    </div>
+    <div>
+        <h2>Segunda data</h2>
+        <p>
+            Dia: <br>
+            <input type="text" id="dia2">
+        </p>
+        <p>
+            Mês: <br>
+            <input type="text" id="mes2">
+        </p>
+        <p>
+            Ano: <br>
+            <input type="text" id="ano2">
+        </p>
+        </div>
+    <p>
+        <input type="button" value="Calcular" onclick="calcData()">
+    </p>
+    <p id="resposta"></p>         
+ </div>
+</body>
+</html>

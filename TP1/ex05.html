@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Mini-Calculadora</title>
+    <script src="../funcoes.js"></script>
+    <link rel="stylesheet" href="../estilo.css">
+    <style>
+            p, h2{  
+        text-align: center;
+    }
+        </style>
+</head>
+<body>
+<div class="tp">
+    <h1>Mini-Calculadora</h1>
+    <p>
+        Selecione a sua opção: 
+        <select name="escolha" id="escolha" onchange="calcularTudo()">
+            <option value="somar">Somar dois números</option>
+            <option value="raiz">Raiz quadrada de um número</option>
+        </select>
+    </p>
+    <p id="resposta"></p>
+    <p id="resultado"></p> 
+</div>       
+</body>
+</html>
