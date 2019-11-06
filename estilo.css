@@ -1,0 +1,76 @@
+
+.tp {
+    border-width: 2px;
+    border-color: gray;
+    border-style: solid;
+    width: 85%;
+    padding: 20px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    line-height: 150%;
+    overflow: auto;
+    background-color: aqua;
+    border-radius: 20px;
+    display: block;
+    margin: 2em auto;   
+}
+
+.menu{
+    background: rgb(53, 53, 73);
+    border-bottom: solid 5px #4faddb;
+    height: 80px;
+    margin: 0;
+    display: block;
+}
+img {
+    width: 100%;
+    
+}
+h1, h2 {
+    text-align: center;
+}
+
+.menu ul {
+    justify-content: space-around;
+}
+
+.menu ul li{
+    display: inline-block;
+    margin: 20px;
+    padding: 10px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: large;
+}
+.menu ul li a:visited, a:hover {
+    color: rgb(98, 98, 236);
+}
+.menu ul li:hover{
+    margin: 20px;
+    padding: 10px;
+    display:inline-block;
+    background-color: white;
+    color: rgb(98, 98, 236);
+}
+
+body {
+    background-color: rgb(14, 60, 66);
+    margin: -13px;
+    font-family: 'Oswald', sans-serif;
+}
+table {
+    width: 50%;
+    margin-bottom : .5em;
+    table-layout: fixed;
+    text-align: center;
+
+}
+a {
+    text-decoration: none;
+}
+
+li {
+    display: inline-block;
+}
+
+p {
+    text-align: justify;
+}
