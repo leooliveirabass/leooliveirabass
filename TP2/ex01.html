@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Calcular novo salario</title>
+    <script src="../funcoes.js"></script>
+    <link rel="stylesheet" href="../estilo.css">
+    <style>
+            .tp p {
+            text-align: center;
+            }
+        </style>
+</head>
+<body>
+<div class="tp">
+    <h1>Calcular novo salario: </h1>
+<p id="formulario">
+    Insira o salario: <br> R$
+    <input type="text" id="salario">
+</p>
+<p id="enviar">
+    <input type="button" value="Enviar" onclick="enviaSalario()">
+</p>
+<p id="resposta"></p>
+</div>
+<script>
+    var salarios = []
+    var novos_salarios = []
+    var pResposta = document.all['resposta']
+    var pEnviar = document.all['enviar']
+    var bon 
+    var novoSal
+    var c = 0
+</script>
+</body>
+</html>
