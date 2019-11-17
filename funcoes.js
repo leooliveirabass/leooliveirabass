@@ -125,35 +125,30 @@ function calcData(){
 }
 
 function enviaSalario() {
-    var sal = Number(document.all['salario'].value)
-    if (sal < 0) {
-        alert('Salário Inválido')
-        return 
+    var novos_salarios = []
+    for (var i = 0; i < 5; i++) {
+        var sal = Number(prompt(`Informe o ${i+1} salário: `))
+        if (sal < 0) {
+            alert('Salário Inválido')
+            return 
+        } if (sal < 500) {
+            bon = sal * 0.05
+            novoSal = sal + bon
+        } else if (sal < 1200) {
+            bon = sal * 0.12
+            novoSal = sal + bon
+        } else {
+            novoSal = sal
+        }
+        if (novoSal < 600) {
+            novoSal += 150
+        } else {
+            novoSal += 100
+        }
+        alert(`O sálario que era de R$${sal.toFixed(2)} agora é de R$${novoSal.toFixed(2)}. ` )
+        novos_salarios.push(novoSal);
     }
-    salarios.push(sal)
-    if (sal < 500) {
-        bon = sal * 0.05
-        novoSal = sal + bon
-    } else if (sal < 1200) {
-        bon = sal * 0.12
-        novoSal = sal + bon
-    } else {
-        novoSal = sal
-    }
-    if (novoSal < 600) {
-        novoSal += 150
-    } else {
-        novoSal += 100
-    }
-    novos_salarios.push(novoSal)
-    c += 1
-    pResposta.innerHTML = ` ${salarios.length} salarios cadastrados. `
-    if (c == 25) {
-        pResposta.innerHTML = "Ja foram cadastrados os 25 salários."
-        pEnviar.innerHTML = ''
-        for (var i = 0; i < novos_salarios.length; i++)
-            pEnviar.innerHTML += `O ${i+1}º salário que era de R$${salarios[i].toFixed(2)}, agora fica no valor de:  R$${novos_salarios[i].toFixed(2)}<br> ` 
-    }
+    return novos_salarios
 }
 
 function calculaPrimo(){
@@ -211,8 +206,8 @@ function enviaVinho() {
     }
     vinhos.push(v)
     pResposta.innerHTML = ` ${vinhos.length} vinhos cadastrados. `
-    if (vinhos.length >= 50) {
-        pResposta.innerHTML = "Ja foram cadastrados os 50 vinhos."
+    if (vinhos.length >= 10) {
+        pResposta.innerHTML = "Ja foram cadastrados os 10 vinhos."
         pEnviar.innerHTML = ''
         pFormulario.innerHTML = ''
         contaVinhos(vinhos)
@@ -232,9 +227,9 @@ function contaVinhos(vinhos) {
             rose += 1
         }  
     }
-    pResposta.innerHTML = `Dos 50 vinhos cadastrados: ${tinto} Tintos (${((tinto / 50) * 100).toFixed(2)}%); 
-    ${branco} Brancos(${((branco / 50) * 100).toFixed(2)}%); 
-    ${rose} Rosês(${((rose / 50) * 100).toFixed(2)}%);  `
+    pResposta.innerHTML = `Dos 10 vinhos cadastrados: ${tinto} Tintos (${((tinto / 10) * 100).toFixed(2)}%); 
+    ${branco} Brancos(${((branco / 10) * 100).toFixed(2)}%); 
+    ${rose} Rosês(${((rose / 10) * 100).toFixed(2)}%);  `
 }
 
 function negativosEPositivos() {
@@ -245,10 +240,10 @@ function negativosEPositivos() {
     } else {
         vet.push(num)
         pResposta.innerHTML = ` ${vet.length} número(s) cadastrado(s). `
-        if (num >= 0) {
+        if (num > 0) {
             vetPos.push(num)
             cPos += 1
-        } else {
+        } else if (num < 0) {
             vetNeg.push(num)
             cNeg += 1
         }
@@ -317,14 +312,13 @@ function vetorAlterado() {
 }
 function alteraVetor(vetor) {
     for (var i = 0; i < vet.length; i++) {
-        num = vetor[i]
-        num += 5
         if (vetor[i] % 2 != 0) {
-            num *= 5
+            vetor[i] *= 5
+        } else {
+            vetor[i] += 5
         }
-        vetAlt.push(num)
     }
-    pEnviar.innerHTML += `Vetor Alterado: ${vetAlt.join(", ")}<br>`
+    pEnviar.innerHTML += `Vetor Alterado: ${vetor.join(", ")}<br>`
 }
 
 function ordenaCrescente20() {
@@ -337,12 +331,12 @@ function ordenaCrescente20() {
         c += 1
         pResposta.innerHTML = ` ${vet.length} número(s) cadastrado(s). `
     }
-    if (c == 20) {
+    if (c == 10) {
         pEnviar.innerHTML = ''
         pResposta.innerHTML = ''
         pEnviar.innerHTML += `Vetor Cadastrado: ${vet.join(", ")}<br>`
-        for (let i = 0; i < 20; i ++) {
-            for (let x = i + 1; x < 20; x++) {
+        for (let i = 0; i < 10; i ++) {
+            for (let x = i + 1; x < 10; x++) {
                 if (vet[i] > vet[x]) {
                     temp = vet[i]
                     vet[i] = vet[x]
